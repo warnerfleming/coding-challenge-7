@@ -44,3 +44,17 @@ const company = {
                salary: 80000,
                subordinates: []
            }]}]};
+
+
+//Task 2
+
+function calculateDepartmentSalary (employee){
+    let totalsalary = 0;
+    totalsalary += employee.salary
+employee.subordinates.forEach(calculateDepartmentSalary(employee))
+return totalsalary
+}
+
+const totalsalary = calculateDepartmentSalary(company.departments[0])
+console.log(totalsalary)
+
