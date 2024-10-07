@@ -58,3 +58,9 @@ return totalsalary
 const totalsalary = calculateDepartmentSalary(company.departments[0])
 console.log(totalsalary)
 
+//Task 3
+
+function calculateCompanySalary(company){
+return company.departments.reduce(total, dep => total + calculateDepartmentSalary(department),0)
+}
+console.log(calculateCompanySalary(company))
